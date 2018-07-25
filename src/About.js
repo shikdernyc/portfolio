@@ -1,54 +1,50 @@
 import React, {Component} from 'react'
+import menuItems from './AboutMeData'
 
-const vTab = ({tabContents})=>{
-  let vtabs = tabContents.map((item, index)=>(item.tab))
-  return(
-        <div className="nav flex-column nav-tabs" id="v-tab" role="tablist" aria-orientation="vertical">
-          {vtabs}
-        </div>
-    )
+const VTab = ({tab})=>{
+  return (
+    <a className={(tab==="Overview") ? 'nav-link active':"nav-link"} id={"vtab-" + tab + "-tab"} data-toggle="tab" href={"#vtab-"+tab} role="tab" aria-controls={"vtab-"+tab} aria-selected="false">{tab}</a>
+  )
 }
 
-const vContent = ({tabContents}) =>{
-  
+const VContent = ({tab, content}) =>{
+  return(
+    <div className={(tab==="Overview")?"tab-pane fade show active":"tab-pane fade"} id={"vtab-"+tab} role="tabpanel" aria-labelledby={"v-tab-" + tab + "-tab"}>{content}</div>
+  )
+}
+
+const VTabMenu = ({menuItems}) =>{
+  const tabs = menuItems.map((item, index)=>(<VTab tab={item.tab}/>))
+  const contents = menuItems.map((item, index)=>(<VContent tab={item.tab} content={item.content}/>))
+  return (
+    <div className="row">
+      <div className="col-3">
+        <div className="nav flex-column nav-tabs" id="v-tab" role="tablist" aria-orientation="vertical">
+          {tabs}
+        </div>
+      </div>
+      <div className="col-9">
+        <div className="tab-content" id="v-tab-content">
+          {contents}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 class About extends Component{
-    // constructor(props){
-    //     super(props)
-    // }
-    
-    getTabWithContent(tabName, content){
-      const tabID = "v-" + tabName + '-tab'
-      const contentID = "v-"+tabName
-      return{
-          tab: <a className="nav-link" id={tabID} data-toggle="tab" href={"#" + contentID} role="tab" aria-controls={contentID} aria-selected="true">{tabName}</a>,
-          content: <div className="tab-pane fade" id={contentID} role="tabpanel" aria-labelledby={tabID}>{content}</div>
-        }
-    }
-    
-    render(){
-      return (
-        <div className="row">
-          <div className="col-3">
-            <div className="nav flex-column nav-tabs" id="v-tab" role="tablist" aria-orientation="vertical">
-              <a className="nav-link active" id="v-pills-home-tab" data-toggle="tab" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Overview</a>
-              <a className="nav-link" id="v-pills-profile-tab" data-toggle="tab" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Education</a>
-              <a className="nav-link" id="v-pills-messages-tab" data-toggle="tab" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Hobbies</a>
-              <a className="nav-link" id="v-pills-settings-tab" data-toggle="tab" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Resume</a>
-            </div>
-          </div>
-          <div className="col-9">
-            <div className="tab-content" id="v-tab-content">
-              <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Overview Content</div>
-              <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Education Content</div>
-              <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Hobbies Content</div>
-              <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Resume</div>
-            </div>
-          </div>
-        </div>
-      );
-    }
+  // constructor(props){
+  //     super(props)
+  // }
+  
+  render(){
+    return ([
+      <div id="about" className="mt-5">
+        <h2 className="text-center mb-4">Hi, I'm Asif</h2>
+        <VTabMenu menuItems={menuItems}/>
+      </div>
+    ]);
+  }
 }
 
 export default About
