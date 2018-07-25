@@ -3,7 +3,12 @@ import React, {Component} from 'react'
 const NavItem = ({key, item}) =>{
     // TODO: Return Nav Item
     const {name, href} = item
-    return(<a href={href}><li key={key}>{name}</li></a>)
+    return(
+          <li className="nav-item">
+            <a className="nav-link" href={href}>{name}</a>
+          </li>
+        )
+    
 }
 
 class Navbar extends Component{
@@ -16,9 +21,21 @@ class Navbar extends Component{
         let navList = this.navItems.map((item, index)=>(
             <NavItem item={item} key={index}/>
         ))
-        return [
-                <ul>{navList}</ul>
-            ]
+        return (
+          <nav id="nav" className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div className="container">
+              <a id="nav-title" className="navbar-brand" href="/">AS</a>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon" />
+              </button>
+              <div className="collapse navbar-collapse" id="navbarResponsive">
+                <ul className="navbar-nav ml-auto">
+                    {navList}
+                </ul>
+              </div>
+            </div>
+          </nav>
+        );
     }
 }
 
