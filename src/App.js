@@ -5,6 +5,7 @@ import './App.css';
 import Navbar from './Navbar'
 import Home from './Home'
 import About from './About'
+import Skills from './Skills'
 
 class App extends Component {
   constructor(props){
@@ -25,6 +26,7 @@ class App extends Component {
         <Home />,
         <div className="container">
           <About />
+          <Skills />
         </div>
     ]);
   }
