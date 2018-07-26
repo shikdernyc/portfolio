@@ -5,7 +5,7 @@ const NavItem = ({key, item}) =>{
     const {name, href} = item
     return(
           <li className="nav-item">
-            <a className="nav-link" href={href}>{name}</a>
+            <a className="nav-link text-light" href={href}>{name}</a>
           </li>
         )
     
@@ -22,9 +22,9 @@ class Navbar extends Component{
             <NavItem item={item} key={index}/>
         ))
         return (
-          <nav id="nav" className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <nav id="nav" className="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
             <div className="container">
-              <a id="nav-title" className="navbar-brand" href="/">AS</a>
+              <a id="nav-title" className="navbar-brand" href="#home">AS</a>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
               </button>
