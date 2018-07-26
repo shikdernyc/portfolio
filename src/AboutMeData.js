@@ -1,8 +1,8 @@
 import React from 'react'
 
-const School = ({name, graduationDate, GPA, description})
+// const School = ({name, graduationDate, GPA, description})
 
-const data = [
+const menuItems = [
     {
         tab: "Overview",
         content: <p>
@@ -24,3 +24,5 @@ const data = [
         content: ""
     }
 ]
+
+export default menuItems
