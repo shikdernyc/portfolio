@@ -4,20 +4,24 @@
 	height: 100%;
 	/* min-height: 35rem; */
 	padding: 15rem 0;
-	/*background: url("https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"rl("https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");*/
-	background: url("https://s3.us-east-2.amazonaws.com/shikdernyc-portfolio/background.jpeg");
+	/*background: url("https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");*/
+	background: url("https://www194.lunapic.com/do-not-link-here-use-hosting-instead/153263342230413892?6551420656");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-size: cover;
 }
 
+.masthead h1 {
+  font-family: 'Varela Round';
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.8rem;
+}
+
 .masthead h2 {
 	max-width: 20rem;
-	font-size: 2rem;
-	/*background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5));*/
-	/* -webkit-text-fill-color: transparent; */
-	-webkit-background-clip: text;
+	font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -33,8 +37,8 @@
 	  padding: 0;
 	}
 	.masthead h1 {
-	  font-size: 6.5rem;
-	  line-height: 6.5rem;
+	  font-size: 5rem;
+	  line-height: 5rem;
 	  letter-spacing: 0.8rem;
 	}
 	.masthead h2 {

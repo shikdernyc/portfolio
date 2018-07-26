@@ -15,8 +15,8 @@ class Home extends Component{
             <div className="container d-flex h-100 align-items-center">
               <div className="mx-auto text-center">
                 <img id="avatar" src={this.avatarUrl} alt='avatar'/>
-                <h1 className="text-white mx-auto mt-2">{this.title}</h1>
-                <h2 className="text-white mx-auto mt-1 mb-2">{this.subTitle}</h2>
+                <h1 id="title"  className="text-uppercase text-white mx-auto mt-2">{this.title}</h1>
+                <h2 id="subtitle" className="text-light mx-auto mt-1 mb-2">{this.subTitle}</h2>
               </div>
             </div>
           </header>
