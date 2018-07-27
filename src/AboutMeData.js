@@ -3,7 +3,7 @@ import React from 'react'
 const School = ({school}) =>{
     const {schoolName, gpa, major, courses, overview, startDate, graduationDate} = school
     return (
-        <div className="card text-center mb-5">
+        <div className="card text-center mb-5 shadow-sm">
           <div className="card-header">
             {major}
           </div>
