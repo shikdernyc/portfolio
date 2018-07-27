@@ -16,7 +16,7 @@ class Skills extends Component{
         
         return(
             <div id="skills" className="my-5">
-                <h2 className="text-center mb-4">Skills</h2>
+                <h2 className="text-center mb-4">My Skills</h2>
                 <div className="card-deck">
                     <div className="row mb-3">
                         {skillList.slice(0,4)}
