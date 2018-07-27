@@ -16,7 +16,7 @@ const Project = ({project}) =>{
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text"><strong>Technology: </strong>{technology}</p>
                     <p className="card-text">{description}</p>
-                    <p className="text-muted">Date: {date}</p>
+                    <p className="text-muted">{date}</p>
                     <div className="row">
                         {button}
                     </div>
