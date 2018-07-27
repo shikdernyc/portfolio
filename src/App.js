@@ -6,6 +6,7 @@ import Navbar from './Navbar'
 import Home from './Home'
 import About from './About'
 import Skills from './Skills'
+import Projects from './Project';
 
 class App extends Component {
   constructor(props){
@@ -16,7 +17,13 @@ class App extends Component {
         {name: 'Skills', href: '#skills'},
         {name: 'Projects', href: '#projects'},
         {name: 'Contact', href: '#contact'}
-      ]
+      ],
+      projects: {
+        projPerRow: 2
+      },
+      skills: {
+        skillPerRow: 4
+      }
     }
   }
   
@@ -26,7 +33,8 @@ class App extends Component {
         <Home />,
         <div className="container">
           <About />
-          <Skills />
+          <Skills skillPerRow={this.state.skills.skillPerRow}/>
+          <Projects projPerRow={this.state.projects.projPerRow}/>
         </div>
     ]);
   }
