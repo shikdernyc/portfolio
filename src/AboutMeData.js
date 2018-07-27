@@ -1,6 +1,48 @@
 import React from 'react'
 
-// const School = ({name, graduationDate, GPA, description})
+const School = ({school}) =>{
+    const {schoolName, gpa, major, courses, overview, startDate, graduationDate} = school
+    return (
+        <div className="card text-center mb-5">
+          <div className="card-header">
+            {major}
+          </div>
+          <div className="card-body">
+            <h5 className="card-title">{schoolName}</h5>
+            <ul className="list-group list-group-flush mb-3">
+                <li className="list-group-item"><strong>GPA:</strong> {gpa}</li>
+                <li className="list-group-item"><strong>Relevent Courses:</strong> {courses}</li>
+            </ul>
+            <p className="card-text">{overview}</p>
+            {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+          </div>
+          <div className="card-footer text-muted">
+            {startDate + " - " + graduationDate}
+          </div>
+        </div>
+      );
+}
+
+const schools = [
+    {
+        schoolName: "Hunter College",
+        gpa: "4.0",
+        major: "Computer Science",
+        courses: "Computer Archetecture, C++ Programming, Statistics",
+        overview: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.",
+        startDate: "August 2017",
+        graduationDate: "May 2021"
+    },
+    {
+        schoolName: "New York City College of Technology",
+        gpa: "4.0",
+        major: "Computer System Information",
+        courses: "Computer Archetecture, C++ Programming, Statistics",
+        overview: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.",
+        startDate: "August 2017",
+        graduationDate: "May 2018"
+    }
+]
 
 const menuItems = [
     {
@@ -9,9 +51,9 @@ const menuItems = [
     },
     {
         tab: "Education",
-        content: <ul>
-            
-        </ul>
+        content: schools.map((schools, index)=>(
+            <School school = {schools}/>
+        ))
     },
     {
         tab: "Hobbies",
