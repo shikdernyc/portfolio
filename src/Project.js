@@ -1,26 +1,28 @@
 import React, {Component} from 'react'
 import projects from './ProjectList'
+import './Project.css'
 
 const Project = ({project}) =>{
     const {key, title, img, technology, description, links, date} = project
     let button = links.map(({label, link}, index)=>((
-        <a key={"proj-link-"+index} href={link} class="btn btn-primary col mx-1">{label}</a>
+        <a key={"proj-link-"+index} href={link} className="btn btn-primary col mx-5">{label}</a>
     )))
 
     return (
-        <div key={key} className="card shadow text-center">
-        <img className="card-img-top" src={img} alt="How the project looks"/>
-        <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          <p className="card-text"><strong>Technology: </strong>{technology}</p>
-          <p className="card-text">{description}</p>
-          <div className="row">
-            {button}
-          </div>
-        </div>
-        <div class="card-footer text-muted">
-            {date}
-        </div>
+        <div key={key} className="card text-center text-light shadow">
+            <img className="card-img-top" src={img} alt="How the project looks"/>
+            <div className="overlay">
+                <div className="card-body">
+                    <h5 className="card-title">{title}</h5>
+                    <p className="card-text"><strong>Technology: </strong>{technology}</p>
+                    <p className="card-text">{description}</p>
+                    <p className="text-muted">Date: {date}</p>
+                    <div className="row">
+                        {button}
+                    </div>
+                </div>
+            </div>
+
       </div>
     )
 }
