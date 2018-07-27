@@ -5,9 +5,7 @@ import React from 'react'
 const menuItems = [
     {
         tab: "Overview",
-        content: <p>
-            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+        content: <div><p>改善 - Kaizen - Japanese philosophy for continuous improvement.</p><p>Hello, I’m Asif Shikder, a second year college student majoring in computer science, working to become an outstanding software engineer one day. I have a competitive 4.0 GPA along with various side projects associated with IBM, NYC Department of Health and NYC Public Health Laboratory. I enjoy Web Development, however, I am also knowledgeable in Android Development, Java, Python, Data Science, and Machine Learning. I am always looking for opportunities to gain more experience in the field of Computer Science in a professional work environment. I am also open to work on any externals or competitions revolving around programming.</p><p>Aside from my interest in programming, I also enjoy teaching, lifting, basketball and billiards. I have been tutoring people since the start of high school and I hope to continue helping those around me alongside my career.</p><p>Feel free to message me about any opportunities or just drop by and say hello. Always open to meet new people :)</p></div>
     },
     {
         tab: "Education",
