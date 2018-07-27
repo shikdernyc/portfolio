@@ -7,6 +7,7 @@ import Home from './Home'
 import About from './About'
 import Skills from './Skills'
 import Projects from './Project';
+import Contact from './Contact';
 
 class App extends Component {
   constructor(props){
@@ -35,6 +36,7 @@ class App extends Component {
           <About />
           <Skills skillPerRow={this.state.skills.skillPerRow}/>
           <Projects projPerRow={this.state.projects.projPerRow}/>
+          <Contact />
         </div>
     ]);
   }
