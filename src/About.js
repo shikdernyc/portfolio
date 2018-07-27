@@ -24,7 +24,7 @@ const VTabMenu = ({menuItems}) =>{
         </div>
       </div>
       <div className="col-9 shadow">
-        <div className="tab-content" id="v-tab-content">
+        <div className="tab-content mx-2" id="v-tab-content">
           {contents}
         </div>
       </div>
@@ -41,7 +41,7 @@ class About extends Component{
     return (
       <div id="about" className="my-5">
         <h2 className="text-center mb-4">Hi, I'm Asif</h2>
-        <VTabMenu menuItems={menuItems}/>
+          <VTabMenu menuItems={menuItems}/>
       </div>
     );
   }
