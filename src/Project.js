@@ -48,12 +48,14 @@ class Projects extends Component{
         }
         
         return(
-            <div id="projects" className="my-5">
-                <h2 className="text-center mb-4">Highlighted Projects</h2>
-                <div className="card-deck">
-                    {dynProjList}
+            <section id="projects" className="my-5">
+                <div className="container">
+                    <h2 className="text-center mb-4">Highlighted Projects</h2>
+                    <div className="card-deck">
+                        {dynProjList}
+                    </div>
                 </div>
-            </div>
+            </section>
         )
     }
 }

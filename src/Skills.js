@@ -37,12 +37,14 @@ class Skills extends Component{
         
         
         return(
-            <div id="skills" className="my-5">
-                <h2 className="text-center mb-4">My Skills</h2>
-                <div className="card-deck">
-                    {dynSkillList}
+            <section id="skills" className="my-5">
+                <div className="container">
+                    <h2 className="text-center mb-4">My Skills</h2>
+                    <div className="card-deck">
+                        {dynSkillList}
+                    </div>
                 </div>
-            </div>
+            </section>
         )
     }
 }

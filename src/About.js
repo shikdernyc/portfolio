@@ -39,10 +39,12 @@ class About extends Component{
   
   render(){
     return (
-      <div id="about" className="my-5">
-        <h2 className="text-center mb-4">Hi, I'm Asif</h2>
-          <VTabMenu menuItems={menuItems}/>
-      </div>
+      <section id="about" className="my-5">
+        <div className="container">
+          <h2 className="text-center mb-4">Hi, I'm Asif</h2>
+            <VTabMenu menuItems={menuItems}/>
+        </div>
+      </section>
     );
   }
 }

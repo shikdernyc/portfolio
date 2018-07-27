@@ -8,6 +8,7 @@ import About from './About'
 import Skills from './Skills'
 import Projects from './Project';
 import Contact from './Contact';
+import Footer from "./Footer"
 
 class App extends Component {
   constructor(props){
@@ -32,12 +33,11 @@ class App extends Component {
     return ([
         <Navbar navItems={this.state.navItems}/>,
         <Home />,
-        <div className="container">
-          <About />
-          <Skills skillPerRow={this.state.skills.skillPerRow}/>
-          <Projects projPerRow={this.state.projects.projPerRow}/>
-          <Contact />
-        </div>
+        <About />,
+        <Skills skillPerRow={this.state.skills.skillPerRow}/>,
+        <Projects projPerRow={this.state.projects.projPerRow}/>,
+        <Contact />,
+        <Footer />
     ]);
   }
 }
