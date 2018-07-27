@@ -5,7 +5,7 @@ const NavItem = ({key, item}) =>{
     const {name, href} = item
     return(
           <li className="nav-item">
-            <a className="nav-link text-light" href={href}>{name}</a>
+            <a className="nav-link text-muted" href={href}>{name}</a>
           </li>
         )
     

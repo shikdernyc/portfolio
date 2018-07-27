@@ -38,12 +38,12 @@ class About extends Component{
   // }
   
   render(){
-    return ([
-      <div id="about" className="mt-5">
+    return (
+      <div id="about" className="my-5">
         <h2 className="text-center mb-4">Hi, I'm Asif</h2>
         <VTabMenu menuItems={menuItems}/>
       </div>
-    ]);
+    );
   }
 }
 

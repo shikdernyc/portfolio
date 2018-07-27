@@ -15,7 +15,7 @@ class Skills extends Component{
         
         
         return(
-            <div id="skills" className="mt-5">
+            <div id="skills" className="my-5">
                 <h2 className="text-center mb-4">Skills</h2>
                 <div className="card-deck">
                     <div className="row mb-3">
