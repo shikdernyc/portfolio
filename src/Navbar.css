@@ -1,0 +1,9 @@
+.nav-dark{
+    background-color: #343a40!important;
+    transition: 0.5s background-color;
+}
+
+.nav-transparent{
+    background-color: transparent!important;
+    transition: 0.5s background-color;
+}
