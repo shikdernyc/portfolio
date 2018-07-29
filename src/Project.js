@@ -9,14 +9,14 @@ const Project = ({project}) =>{
     )))
 
     return (
-        <div key={key} className="card text-center text-light shadow">
+        <div key={key} className="card text-center text-white shadow">
             <img className="card-img-top" src={img} alt="How the project looks"/>
             <div className="overlay">
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text"><strong>Technology: </strong>{technology}</p>
                     <p className="card-text">{description}</p>
-                    <p className="text-muted">{date}</p>
+                    <p className="text-white-50">{date}</p>
                     <div className="row">
                         {button}
                     </div>
@@ -34,14 +34,14 @@ class Projects extends Component{
     }
 
     render(){
-        let projList = projects.map((project)=>(
-            <Project project={project} />
+        let projList = projects.map((project, index)=>(
+            <Project key={"project-"+index} project={project} />
         ))
         let dynProjList = [];
 
         for(let i = 0 ; i< projList.length ;i+= this.projPerRow){
             dynProjList.push(
-                <div className="row mb-4">
+                <div key={"pList-"+i} className="row mb-4">
                     {projList.slice(i,i+this.projPerRow)}
                 </div>
             )

@@ -14,8 +14,8 @@ const VContent = ({tab, content}) =>{
 }
 
 const VTabMenu = ({menuItems}) =>{
-  const tabs = menuItems.map((item, index)=>(<VTab key={index*10} tab={item.tab}/>))
-  const contents = menuItems.map((item, index)=>(<VContent key={index} tab={item.tab} content={item.content}/>))
+  const tabs = menuItems.map((item, index)=>(<VTab key={"vTabMenu-"+index} tab={item.tab}/>))
+  const contents = menuItems.map((item, index)=>(<VContent key={"vContent-"+index} tab={item.tab} content={item.content}/>))
   return (
     <div className="row">
       <div className="col-3">

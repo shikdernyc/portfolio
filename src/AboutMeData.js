@@ -1,18 +1,46 @@
 import React from 'react'
 
+const hobbies = [
+    "Billards",
+    "Basketball",
+    "Lifting",
+    "Coding (0bviously)",
+    "Reading (Recently) (Always looking for new recommendation)",
+    "Talking about life and philosophy"
+]
+
+const schools = [
+    {
+        schoolName: "Hunter College",
+        gpa: "4.0",
+        major: "Computer Science",
+        courses: "Computer Archetecture, C++ Programming, Statistics",
+        overview: "I am a transfer student at Hunter College, starting the Fall of 2018. I will be majoring in Computer Science and hoping to get involved in various side projects and research programs they offer there.",
+        startDate: "August 2017",
+        graduationDate: "May 2021"
+    },
+    {
+        schoolName: "New York City College of Technology",
+        gpa: "4.0",
+        major: "Computer System Information",
+        courses: "Computer Archetecture, C++ Programming, Statistics",
+        overview: "I have been a student at New York City College of Technology for two semester. Over that time period, I have managed to maintain a strong achedemic experience, receiving offers from various honors programs and received a Dean's Honor Award.",
+        startDate: "August 2017",
+        graduationDate: "May 2018"
+    }
+]
+
 const School = ({school}) =>{
     const {schoolName, gpa, major, courses, overview, startDate, graduationDate} = school
     return (
-        <div className="card text-center mb-5 shadow-sm">
+        <div className="card text-center my-3 shadow-sm">
           <div className="card-header">
             {major}
           </div>
           <div className="card-body">
             <h5 className="card-title">{schoolName}</h5>
-            <ul className="list-group list-group-flush mb-3">
-                <li className="list-group-item"><strong>GPA:</strong> {gpa}</li>
-                <li className="list-group-item"><strong>Relevent Courses:</strong> {courses}</li>
-            </ul>
+            <p><strong>GPA:</strong> {gpa}</p>
+            <p><strong>Relevent Courses:</strong> {courses}</p>
             <p className="card-text">{overview}</p>
             {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
           </div>
@@ -23,26 +51,17 @@ const School = ({school}) =>{
       );
 }
 
-const schools = [
-    {
-        schoolName: "Hunter College",
-        gpa: "4.0",
-        major: "Computer Science",
-        courses: "Computer Archetecture, C++ Programming, Statistics",
-        overview: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.",
-        startDate: "August 2017",
-        graduationDate: "May 2021"
-    },
-    {
-        schoolName: "New York City College of Technology",
-        gpa: "4.0",
-        major: "Computer System Information",
-        courses: "Computer Archetecture, C++ Programming, Statistics",
-        overview: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.",
-        startDate: "August 2017",
-        graduationDate: "May 2018"
-    }
-]
+const Hobbies = ({hobbies})=>{
+    const hobbyList = hobbies.map((hobby, index)=>(
+        <li className="list-group-item" key={'hobby-'+index}>{hobby}</li>
+    ))
+
+    return (
+        <ul className="list-group list-group-flush my-3">
+            {hobbyList}
+        </ul>
+    )
+}
 
 const menuItems = [
     {
@@ -52,16 +71,16 @@ const menuItems = [
     {
         tab: "Education",
         content: schools.map((schools, index)=>(
-            <School school = {schools}/>
+            <School key={"school-"+index} school = {schools}/>
         ))
     },
     {
         tab: "Hobbies",
-        content: ""
+        content: <Hobbies hobbies={hobbies}/>
     },
     {
         tab: "Resume",
-        content: ""
+        content: <p>Resume has been updated on July 2018: <a href="https://drive.google.com/open?id=0B5DvzYyeO1rwWXZWQXNzQjZNanVfUGVjMTl4WmdlSWpwUWw4" rel="noopener noreferrer" target="_blank">Google Drive</a></p>
     }
 ]
 

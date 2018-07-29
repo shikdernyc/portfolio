@@ -7,7 +7,7 @@ class Contact extends Component{
             <section id="contact" className="my-5">
                 <div className="container">
                     <h3 className="text-center mb-4">Let's get in Touch!</h3>
-                    <form action="mailto:shikdernyc@gmail.com.com" method="post" enctype="text/plain">
+                    <form action="mailto:shikdernyc@gmail.com.com" method="post" encType="text/plain">
                         <div className="form-row">
                             <div className="col mx-3">
                                 <div className="form-group">

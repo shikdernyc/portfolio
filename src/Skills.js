@@ -21,15 +21,15 @@ class Skills extends Component{
     }
 
     render(){
-        let skillList = skills.map((skill)=>(
-            <Skill skill={skill} />
+        let skillList = skills.map((skill, index)=>(
+            <Skill key={"skill-"+index} skill={skill} />
         ))
 
         let dynSkillList = [];
 
         for(let i = 0 ; i< skillList.length ;i+= this.skillPerRow){
             dynSkillList.push(
-                <div className="row mb-4">
+                <div key={"sList-"+i} className="row mb-4">
                     {skillList.slice(i,i+this.skillPerRow)}
                 </div>
             )

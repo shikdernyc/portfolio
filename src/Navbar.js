@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import './Navbar.css';
 
-const NavItem = ({key, item}) =>{
+const NavItem = ({item}) =>{
     // TODO: Return Nav Item
     const {name, href} = item
     return(
-          <li key={key} className="nav-item">
+          <li className="nav-item">
             <a className="nav-link" href={href}>{name}</a>
           </li>
         )
@@ -47,12 +47,12 @@ class Navbar extends Component{
     
     render(){
         let navList = this.navItems.map((item, index)=>(
-            <NavItem item={item} key={index}/>
+            <NavItem item={item} key={"navitem-"+index}/>
         ))
         return (
           <nav id="nav" ref="table" className="navbar fixed-top navbar-expand-lg navbar-light bg-transparent">
             <div className="container">
-              <a id="nav-title" className="navbar-brand" href="#home">AS</a>
+              <a id="nav-title" className="navbar-brand" href="#home">shIKderTECH</a>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
               </button>
