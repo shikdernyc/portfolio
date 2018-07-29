@@ -4,8 +4,7 @@
 	height: 100%;
 	/* min-height: 35rem; */
 	padding: 15rem 0;
-	/*background: url("https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");*/
-	background: url("./background.jpeg");
+	background: url("./background.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
