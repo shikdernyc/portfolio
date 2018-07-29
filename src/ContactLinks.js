@@ -1,23 +1,23 @@
 const contactLinks = [
     {
       icon: "fab fa-github",
-      link: "#"
+      link: "https://github.com/shikdernyc"
     },
     {
       icon: "fab fa-instagram",
-      link: "#"
+      link: "https://www.instagram.com/theasif_"
     },
     {
       icon: "fab fa-facebook",
-      link: "#"
+      link: "https://www.facebook.com/ashikderBTHS"
     },
     {
       icon: "fab fa-twitter-square",
-      link: "#"
+      link: "https://twitter.com/shikdernyc"
     },
     {
       icon: "fab fa-linkedin",
-      link: "#"
+      link: "https://www.linkedin.com/in/shikdernyc/"
     }
 ]
 
