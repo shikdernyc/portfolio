@@ -1,4 +1,6 @@
-## ShikderTECH.io - Portfolio
+## ShikderTECH.io
+
+## Portfolio
 
 A static website to host my portfolio. This website contains a list of my skills, projects, educational background and other CV related to my professional life. The website is currently being hosted on Heroku under the domain shikdertech.io (Will soon migrate to AWS EB) and it will be  a central hub for hosting my future projects.
 
