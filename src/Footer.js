@@ -10,17 +10,17 @@ class Footer extends Component{
         let socialMedia = contactLinks.map(({icon, link}, index)=>(<MediaLink key={"medialink-"+index} icon={icon} link={link} />))
 
         return (
-            <footer className="text-light">
-              <div className="row py-5 bg-dark text-center">
-                <div className="container col">
-                  {socialMedia}
-                </div>
+          <footer className="text-light">
+            <div className="py-5 bg-dark text-center">
+              <div className="container">
+                {socialMedia}
               </div>
-              <div className="footer-copyright text-center py-2 bg-dark">© 2018 Copyright:
-                <a href="http://www.shikdertech.io"> shikdertech.io</a>
-              </div>
-            </footer>
-          );
+            </div>
+            <div className="footer-copyright text-center py-2 bg-dark">© 2018 Copyright:
+              <a href="http://www.shikdertech.io"> ShikderTECH.io</a>
+            </div>
+          </footer>
+        );
     }
 }
 
