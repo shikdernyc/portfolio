@@ -8,6 +8,11 @@
     transition: 0.5s background-color;
 }
 
+#nav{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
 @media screen and (max-width: 600px) {
     responsive {
         /*float: none;*/
