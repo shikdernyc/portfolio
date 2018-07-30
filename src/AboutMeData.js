@@ -33,7 +33,7 @@ const schools = [
 const School = ({school}) =>{
     const {schoolName, gpa, major, courses, overview, startDate, graduationDate} = school
     return (
-        <div className="card text-center my-3 shadow-sm">
+        <div className="card text-center shadow-sm">
           <div className="card-header">
             {major}
           </div>
@@ -57,12 +57,13 @@ const Hobbies = ({hobbies})=>{
     ))
 
     return (
-        <ul className="list-group list-group-flush my-3">
+        <ul className="list-group list-group-flush">
             {hobbyList}
         </ul>
     )
 }
 
+// First Item will be the default item that will always be displayed
 const menuItems = [
     {
         tab: "Overview",
