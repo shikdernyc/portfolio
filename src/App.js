@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 //Components
 import Navbar from './Navbar'
@@ -20,6 +21,9 @@ class App extends Component {
         {name: 'Projects', href: '#projects'},
         {name: 'Contact', href: '#contact'}
       ],
+      about:{
+        content: ""
+      },
       projects: {
         projPerRow: 2
       },
@@ -27,13 +31,26 @@ class App extends Component {
         skillPerRow: 4
       }
     }
+    this.setAboutContent = this.setAboutContent.bind(this)
+  }
+
+  setAboutContent(newContent){
+    const newState = {
+      about:
+      {
+        content: newContent
+      },
+    }
+    // console.log(newState)
+    this.setState(newState)
   }
   
   render() {
+    console.log(this.state.about.content)
     return ([
         <Navbar navItems={this.state.navItems}/>,
         <Home />,
-        <About />,
+        <About setAboutContent={this.setAboutContent} content={this.state.about.content}/>,
         <Skills skillPerRow={this.state.skills.skillPerRow}/>,
         <Projects projPerRow={this.state.projects.projPerRow}/>,
         <Contact />,
