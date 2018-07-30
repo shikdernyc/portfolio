@@ -40,7 +40,8 @@ class About extends Component{
               </div>
             </div>
             <div className="col-9 shadow">
-              <div className="tab-content mx-2 my-2" id="v-tab-content">
+              <div className="tab-content" id="v-tab-content">
+                <h1 className="text-center mb-4">Hi I'm Asif</h1>
                 {this.props.content==="" ? this.defaultContent : this.props.content}
               </div>
             </div>
