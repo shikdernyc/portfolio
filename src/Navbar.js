@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './Navbar.css';
+import 'bootstrap/js/dist/collapse'
 
 const NavItem = ({item}) =>{
     // TODO: Return Nav Item
