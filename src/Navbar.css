@@ -7,3 +7,11 @@
     background-color: transparent!important;
     transition: 0.5s background-color;
 }
+
+@media screen and (max-width: 600px) {
+    responsive {
+        /*float: none;*/
+        display: block;
+        text-align: left;
+    }
+}
