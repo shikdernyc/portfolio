@@ -76,7 +76,7 @@ const projects = [
     {
         key: "proj-3",
         img: "https://s3.us-east-2.amazonaws.com/shikdernyc-portfolio/images/Eleven.jpg",
-        title: "Project Title",
+        title: "Eleven",
         technology: "React, JS, NPM, Express",
         description: "Implemented the popular card game Eleven. User is able to interact with a GUI and play a randomized Eleven game.",
         links: [
