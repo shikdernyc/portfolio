@@ -18,6 +18,7 @@ class Home extends Component{
                 <img id="avatar" src={avatar} alt='avatar'/>
                 <h1 id="title"  className="text-uppercase text-dark mx-auto mt-2">{this.title}</h1>
                 <h2 id="subtitle" className="text-muted mx-auto mt-1 mb-2">{this.subTitle}</h2>
+                <div className='icon-scroll'></div>
               </div>
             </div>
           </header>
