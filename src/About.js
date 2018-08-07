@@ -33,6 +33,7 @@ class About extends Component{
     return (
       <section id="about" className="my-5">
         <div className="container">
+          <h1 className="text-center mb-4">Hi I'm Asif</h1>
           <div className="row">
             <div className="col-3">
               <div className="nav flex-column nav-tabs" id="v-tab" role="tablist" aria-orientation="vertical">
@@ -41,7 +42,6 @@ class About extends Component{
             </div>
             <div className="col-9 shadow">
               <div className="tab-content" id="v-tab-content">
-                <h1 className="text-center mb-4">Hi I'm Asif</h1>
                 {this.props.content==="" ? this.defaultContent : this.props.content}
               </div>
             </div>
