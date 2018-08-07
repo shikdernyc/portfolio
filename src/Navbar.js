@@ -1,12 +1,19 @@
 import React, {Component} from 'react'
 import './Navbar.css';
 
+function handleSmoothScroll(event){
+  event.preventDefault()
+  const scrollToID = event.target.getAttribute('href').substr(1)
+  const element = document.getElementById(scrollToID)
+  element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+}
+
 const NavItem = ({item}) =>{
     // TODO: Return Nav Item
     const {name, href} = item
     return(
           <li className="nav-item">
-            <a className="nav-link" href={href}>{name}</a>
+            <a className="nav-link" onClick={handleSmoothScroll} href={href}>{name}</a>
           </li>
         )
     
@@ -52,7 +59,7 @@ class Navbar extends Component{
         return (
           <nav id="nav" ref="table" className="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
             <div className="container">
-              <a id="nav-title" className="navbar-brand" href="#home">ShikderTECH</a>
+              <a id="nav-title" className="navbar-brand" href="#home" onClick={handleSmoothScroll}>ShikderTECH</a>
               <button className="navbar-toggler" type="button" onClick={this.toggleResponsive}>
                 <span className="navbar-toggler-icon" />
               </button>
