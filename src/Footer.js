@@ -1,16 +1,21 @@
 import React, {Component} from 'react'
 import contactLinks from './ContactLinks'
-
+import ScrollReveal from 'scrollreveal'
 const MediaLink = ({icon, link}) =>(
   <a href={link} rel="noopener noreferrer" target="_blank"><i className={icon + " fa-lg white-text fa-2x mx-4"}></i></a>
 )
 
 class Footer extends Component{
+    componentDidMount(){
+      ScrollReveal().reveal('#footer .container, .footer-copyright a', {duration: 2000, interval: 100})
+      ScrollReveal().reveal('#footer', {duration: 600})
+    }
+  
     render(){
         let socialMedia = contactLinks.map(({icon, link}, index)=>(<MediaLink key={"medialink-"+index} icon={icon} link={link} />))
 
         return (
-          <footer className="text-light">
+          <footer id="footer" className="text-light">
             <div className="py-5 bg-dark text-center">
               <div className="container">
                 {socialMedia}

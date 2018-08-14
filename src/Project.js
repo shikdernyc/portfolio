@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ScrollReveal from 'scrollreveal'
 import projects from './ProjectList'
 import './Project.css'
 
@@ -9,7 +10,7 @@ const Project = ({project}) =>{
     )))
 
     return (
-        <div key={key} className="card text-center text-white shadow">
+        <div key={key} className="card text-center text-white shadow project-card">
             <img className="card-img-top" src={img} alt="How the project looks"/>
             <div className="overlay">
                 <div className="card-body">
@@ -31,6 +32,10 @@ class Projects extends Component{
     constructor(props){
         super(props)
         this.projPerRow = props.projPerRow;
+    }
+    
+    componentDidMount(){
+        ScrollReveal().reveal('.project-card', {interval: 150, duration: 500, easing: 'ease-in' });
     }
 
     render(){

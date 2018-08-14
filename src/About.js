@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import menuItems from './AboutMeData'
+import ScrollReveal from 'scrollreveal'
+
 
 class About extends Component{
   constructor(props){
@@ -23,6 +25,8 @@ class About extends Component{
   componentDidMount(){
     const vTabs = document.getElementsByClassName('v-tab')
     vTabs[0].classList.add('active')
+    ScrollReveal().reveal('#v-tab', {distance: '300px', origin: 'left', duration: 1000 });
+    ScrollReveal().reveal('#v-tab-content', {delay: 500, duration: 1500 });
   }
   
   render(){
@@ -33,7 +37,7 @@ class About extends Component{
     return (
       <section id="about" className="my-5">
         <div className="container">
-          <h1 className="text-center mb-4">Hi I'm Asif</h1>
+          <h2 className="text-center mb-4">Hi I'm Asif</h2>
           <div className="row">
             <div className="col-3">
               <div className="nav flex-column nav-tabs" id="v-tab" role="tablist" aria-orientation="vertical">

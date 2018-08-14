@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ScrollReveal from 'scrollreveal'
 import './Navbar.css';
 
 function handleSmoothScroll(event){
@@ -27,6 +28,8 @@ class Navbar extends Component{
 
     componentDidMount() {
       window.addEventListener('scroll', this.handleScroll.bind(this));
+      // ScrollReveal().reveal('.nav-item', {distance: '200px', origin: 'right', interval: 100})
+      ScrollReveal().reveal('#nav', {distance: '3000px', origin: 'bottom', duration: 1500})
     }
     componentWillUnmount() {
       window.removeEventListener('scroll', this.handleScroll.bind(this));
@@ -39,11 +42,15 @@ class Navbar extends Component{
       if(currentHeight >= homeHeight * .6)
       {
         nav.classList.add('nav-dark')
+        nav.classList.add('navbar-dark')
         nav.classList.remove('nav-transparent')
+        nav.classList.remove('navbar-light')
       }
       else{
         nav.classList.remove('nav-dark')
+        nav.classList.remove('navbar-dark')
         nav.classList.add('nav-transparent')
+        nav.classList.add('navbar-light')
       }
       console.log()
     }
@@ -57,7 +64,7 @@ class Navbar extends Component{
             <NavItem item={item} key={"navitem-"+index}/>
         ))
         return (
-          <nav id="nav" ref="table" className="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
+          <nav id="nav" ref="table" className="navbar fixed-top navbar-expand-lg navbar-light bg-transparent">
             <div className="container">
               <a id="nav-title" className="navbar-brand" href="#home" onClick={handleSmoothScroll}>ShikderTECH</a>
               <button className="navbar-toggler" type="button" onClick={this.toggleResponsive}>

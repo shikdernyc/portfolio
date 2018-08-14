@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
+import ScrollReveal from 'scrollreveal'
 import skills from './SkillList'
 
 const Skill = ({skill}) =>{
     const {icon, title, desc, key} = skill
     return (
-        <div key={key} className="card shadow">
+        <div key={key} className="card shadow skillcard">
         <i className={icon + " text-center fa-5x mt-2"}/>
         <div className="card-body">
           <h5 className="card-title text-center">{title}</h5>
@@ -14,10 +15,15 @@ const Skill = ({skill}) =>{
     )
 }
 
+
 class Skills extends Component{
     constructor(props){
         super(props)
         this.skillPerRow = props.skillPerRow
+    }
+    
+    componentDidMount(){
+        ScrollReveal().reveal('.skillcard', {distance: '300px', origin: 'bottom',  duration: 500, interval: 150 });
     }
 
     render(){

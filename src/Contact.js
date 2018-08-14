@@ -1,6 +1,13 @@
 import React, {Component} from 'react'
+import ScrollReveal from 'scrollreveal'
 
 class Contact extends Component{
+    
+    componentDidMount(){
+        ScrollReveal().reveal('#contact-left', {distance: '300px', origin: 'left', duration: 1000})
+        ScrollReveal().reveal('#contact-right', {distance: '300px', origin: 'right', duration: 1000})
+        ScrollReveal().reveal('#contact h3', {distance: '300px', origin: 'top', duration: 1000})
+    }
 
     render(){
         return (
@@ -9,7 +16,7 @@ class Contact extends Component{
                     <h3 className="text-center mb-4">Let's get in Touch!</h3>
                     <form action="mailto:shikdernyc@gmail.com.com" method="post" encType="text/plain">
                         <div className="form-row">
-                            <div className="col mx-3">
+                            <div className="col mx-3" id="contact-left">
                                 <div className="form-group">
                                     <label htmlFor="contact-name">Your name</label>
                                     <input type="text" className="form-control" id="contact-name" placeholder="Enter Name" />
@@ -23,7 +30,7 @@ class Contact extends Component{
                                     <input type="text" className="form-control" id="contact-subject" placeholder="Enter Email Subject" />
                                 </div>
                             </div>
-                                <div className="col">
+                                <div className="col" id="contact-right">
                                 <div className="form-group">
                                     <label htmlFor="description"> Message</label>
                                     <textarea className="form-control" id="description" rows="6" placeholder="Enter Your Message" defaultValue={""} />

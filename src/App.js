@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import ScrollReveal from 'scrollreveal'
 //Components
 import Navbar from './Navbar'
 import Home from './Home'
@@ -31,6 +31,10 @@ class App extends Component {
       }
     }
     this.setAboutContent = this.setAboutContent.bind(this)
+  }
+  
+  componentDidMount(){
+    ScrollReveal().reveal('section', { delay: 250 });
   }
 
   setAboutContent(newContent){
