@@ -33,7 +33,7 @@ const schools = [
 const School = ({school}) =>{
     const {schoolName, gpa, major, courses, overview, startDate, graduationDate} = school
     return (
-        <div className="card text-center shadow-sm">
+        <div className="card text-center shadow-sm my-3">
           <div className="card-header">
             {major}
           </div>
