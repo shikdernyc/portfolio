@@ -4,9 +4,9 @@ import ScrollReveal from 'scrollreveal'
 class Contact extends Component{
     
     componentDidMount(){
-        ScrollReveal().reveal('#contact-left', {distance: '300px', origin: 'left', duration: 1000})
-        ScrollReveal().reveal('#contact-right', {distance: '300px', origin: 'right', duration: 1000})
-        ScrollReveal().reveal('#contact h3', {distance: '300px', origin: 'top', duration: 1000})
+        ScrollReveal().reveal('#contact-left', {distance: '300px', origin: 'left', delay: 200, duration: 750})
+        ScrollReveal().reveal('#contact-right', {distance: '300px', origin: 'right', delay: 200, duration: 750})
+        ScrollReveal().reveal('#contact h3', {distance: '300px', origin: 'top', delay: 200, duration: 750})
     }
 
     render(){

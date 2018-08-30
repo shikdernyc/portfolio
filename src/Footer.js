@@ -7,7 +7,7 @@ const MediaLink = ({icon, link}) =>(
 
 class Footer extends Component{
     componentDidMount(){
-      ScrollReveal().reveal('#footer .container, .footer-copyright a', {duration: 2000, interval: 100})
+      ScrollReveal().reveal('#footer .container, .footer-copyright a', {duration: 1000, interval: 100})
       ScrollReveal().reveal('#footer', {duration: 600})
     }
   

@@ -25,8 +25,8 @@ class About extends Component{
   componentDidMount(){
     const vTabs = document.getElementsByClassName('v-tab')
     vTabs[0].classList.add('active')
-    ScrollReveal().reveal('#v-tab', {distance: '300px', origin: 'left', duration: 1000 });
-    ScrollReveal().reveal('#v-tab-content', {delay: 500, duration: 1500 });
+    ScrollReveal().reveal('#v-tab', {distance: '300px', origin: 'left', delay: 200, duration: 500 });
+    ScrollReveal().reveal('#v-tab-content', {delay: 200, duration: 500 });
   }
   
   render(){

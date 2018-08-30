@@ -35,7 +35,7 @@ class Projects extends Component{
     }
     
     componentDidMount(){
-        ScrollReveal().reveal('.project-card', {interval: 150, duration: 500, easing: 'ease-in' });
+        ScrollReveal().reveal('.project-card', {interval: 100, duration: 200, easing: 'ease-in' });
     }
 
     render(){

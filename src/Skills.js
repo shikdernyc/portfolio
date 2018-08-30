@@ -23,7 +23,7 @@ class Skills extends Component{
     }
     
     componentDidMount(){
-        ScrollReveal().reveal('.skillcard', {distance: '300px', origin: 'bottom',  duration: 500, interval: 150 });
+        ScrollReveal().reveal('.skillcard', {distance: '300px', origin: 'bottom',  duration: 500, interval: 100 });
     }
 
     render(){

@@ -29,7 +29,7 @@ class Navbar extends Component{
     componentDidMount() {
       window.addEventListener('scroll', this.handleScroll.bind(this));
       // ScrollReveal().reveal('.nav-item', {distance: '200px', origin: 'right', interval: 100})
-      ScrollReveal().reveal('#nav', {distance: '3000px', origin: 'bottom', duration: 1500})
+      ScrollReveal().reveal('#nav', {distance: '3000px', origin: 'bottom', duration: 750})
     }
     componentWillUnmount() {
       window.removeEventListener('scroll', this.handleScroll.bind(this));
